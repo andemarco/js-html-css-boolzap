@@ -8,6 +8,7 @@ $(document).ready (
         nuovoMessaggio.children('p').text(testoDaInviare)
         console.log(nuovoMessaggio);
         $('.chat__main').append(nuovoMessaggio)
+        nuovoMessaggio.show()
       }
     );
   }
