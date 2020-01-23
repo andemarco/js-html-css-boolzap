@@ -38,5 +38,15 @@ overflow-y: scroll; */
 
 }
 .contacts__main {
-
+  height: calc(100% - 150px);
+}
+.contacts__main__search {
+  height: 40px;
+  background-color: orange;
+}
+.contacts__main__chat {
+  background-color: grey;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
 }
