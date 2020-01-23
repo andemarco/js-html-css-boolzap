@@ -93,10 +93,27 @@
 .contacts__main {
   height: calc(100% - 150px);
 }
+/* CONTACTS MAIN SEARCH */
 .contacts__main__search {
   height: 40px;
   background-color: orange;
 }
+.contacts__main__search i{
+  position: relative;
+  bottom: 78%;
+  left: 2%;
+  color: lightgrey;
+  font-size: 1.1em;
+}
+.contacts__main__search__input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 30px;
+  font-size: 0.8em;
+}
+
 .contacts__main__chat {
   background-color: grey;
   height: 100%;
