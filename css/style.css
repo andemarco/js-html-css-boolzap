@@ -23,9 +23,11 @@
   padding: 10px;
 }
 .avatar--own {
-  height: 100%;
-  width: 14%;;
+  height: 55px;
+  width: 54px;
   border-radius: 100%;
+  padding: 5px;
+  margin-left: 5px;
 }
 .avatar--friend {
   height: 100%;
@@ -57,7 +59,7 @@
 .contacts__header__own__icons {
   float: right;
   height: 100%;
-  line-height: 45px;
+  line-height: 55px;
   padding-right: 15px;
   color: grey;
   font-size: 1.1em;
@@ -162,19 +164,114 @@
 .chat {
   height: 100%;
   width: 70%;
-  background-color: azure;
 }
 .chat__header {
   height: 55px;
-  background-color: black;
+  background-color: #EDEDED;
+  border-left: 1px solid lightgrey;
+}
+.chat__header__text {
+  position: absolute;
+  display: inline-block;
+  vertical-align: bottom;
+  height: 55px;
+  line-height: 16px;
+  padding-top: 12px;
+  padding-left: 16px;
+}
+.chat__header__text h6 {
+  font-size: 0.85em;
+}
+.chat__header__text p {
+  font-size: 0.65em;
+  color: grey;
+}
+.chat__header__icon {
+  float: right;
+  color: grey;
+  line-height: 55px;
+  padding-right: 20px;
+  font-size: 1.1em;
+}
+.chat__header__icon i {
+  padding-left: 10px;
+}
+.chat__header__icon i:hover {
+  cursor: pointer
+}
+.chat__header__text h6:hover {
+  cursor: pointer;
 }
 .chat__main {
   height: calc(100% - 110px);
   overflow: hidden;
   overflow-y: scroll;
-  background-color: green;
+  background-image: url(../avatars/wp_132.jpg);
+  padding: 20px 60px 20px 60px;
 }
+.chat__main__send {
+  width: 20%;
+  max-width: 80%;
+  height: 40px;
+  background-color: #DCF8C6;
+  float: right;
+  border-radius: 15px;
+  line-height: 40px;
+  font-size: 0.75em;
+  text-align: center;
+}
+.chat__main__answer {
+  width: 20%;
+  max-width: 80%;
+  height: 40px;
+  background-color: white;
+  float: left;
+  border-radius: 15px;
+  line-height: 40px;
+  font-size: 0.75em;
+  text-align: center;
+}
+.chat__main__answer span,
+.chat__main__send span {
+  font-size: 0.3em;
+  bottom: 10%;
+  position: relative;
+  bottom: 30px;
+  left: 43px;
+  color: grey
+}
+
+
+/* CHAT FOOTER  */
 .chat__footer {
   height: 55px;
-  background-color: lightgreen;
+  background-color: #EDEDED;
+  display: flex;
+}
+.chat__footer__emoticon {
+  width: 10%;
+  text-align: center;
+  align-self: center;
+  font-size: 1.4em;
+  color: grey;
+}
+.chat__footer__emoticon:hover {
+  cursor: pointer;
+}
+.chat__footer input {
+  width: 80%;
+  height: 80%;
+  border: #EDEDED 1px solid;
+  align-self: center;
+  font-size: 0.95em;
+}
+.chat__footer__send {
+  width: 10%;
+  text-align: center;
+  align-self: center;
+  font-size: 1.4em;
+  color: grey;
+}
+.chat__footer__send:hover {
+  cursor: pointer;
 }
