@@ -39,6 +39,9 @@
   position: table;
   content: '';
 }
+.hide {
+  display: none
+}
 /* CONTACTS */
 .contacts {
   height: 100%;
