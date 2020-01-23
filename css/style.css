@@ -27,6 +27,10 @@
   background-color: purple;
   z-index: 3456
 }
+.contacts__header__own {
+  height: 50%;
+  background-color: lightgrey;
+}
 .contacts__main {
   height: calc(100% - 150px);
 }
