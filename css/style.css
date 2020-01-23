@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 0 auto;
 }
+/* SCROLLBAR */
+/* height: calc(100% - 110px);
+overflow: hidden;
+overflow-y: scroll; */
 
 .container {
   background-color: red;
@@ -19,11 +23,20 @@
 }
 .contacts {
   height: 100%;
-  width: 35%;
+  width: 30%;
   background-color: yellow;
 }
 .chat {
   height: 100%;
-  width: 65%;
+  width: 70%;
   background-color: azure;
+}
+.contacts__header {
+  height: 110px;
+  background-color: purple;
+  z-index: 3456
+
+}
+.contacts__main {
+
 }
