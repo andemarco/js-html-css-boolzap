@@ -5,7 +5,7 @@
   font-family: 'Roboto', sans-serif;
 }
 .container {
-  background: linear-gradient(to bottom, #105A70 0%,#105A70 50%,#000000 50%,lightgrey 50%,lightgrey 100%);
+  background: linear-gradient(to bottom, #4FB59D 0%,#4FB59D 20%,#000000 20%,lightgrey 20%,lightgrey 100%);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -213,7 +213,7 @@
   padding: 20px 60px 20px 60px;
 }
 .chat__main__send {
-  width: 20%;
+  min-width: 20%;
   max-width: 80%;
   height: 40px;
   background-color: #DCF8C6;
