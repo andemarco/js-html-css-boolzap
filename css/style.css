@@ -216,34 +216,38 @@
   min-width: 20%;
   max-width: 80%;
   height: 40px;
+  padding: 0px 3px 0px 3px;
   background-color: #DCF8C6;
   float: right;
   border-radius: 15px;
-  line-height: 40px;
   font-size: 0.75em;
-  text-align: center;
   margin-bottom: 5px;
 }
 .chat__main__answer {
-  width: 20%;
+  min-width: 20%;
   max-width: 80%;
   height: 40px;
+  padding: 0px 3px 0px 3px;
   background-color: white;
   float: left;
   border-radius: 15px;
-  line-height: 40px;
   font-size: 0.75em;
-  text-align: center;
   margin-bottom: 5px;
 }
-.chat__main__answer span,
-.chat__main__send span {
+.chat__main__answer p,
+.chat__main__send p {
+  line-height: 30px;
+  text-align: left;
+}
+.chat__main__answer small,
+.chat__main__send small {
   font-size: 0.3em;
-  bottom: 10%;
-  position: relative;
-  bottom: 30px;
-  left: 43px;
-  color: grey
+  line-height: 10px;
+  text-align: right;
+  display: block;
+  vertical-align: top;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 
 

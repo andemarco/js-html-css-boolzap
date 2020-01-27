@@ -5,11 +5,6 @@ $(document).ready(function() {
         setTimeout(receiveMessage, 1000)
       }
   );
-  $(document).on("click", ".contacts__main .fa-search",
-      function() {
-        searchContact();
-      }
-  );
   $(document).keyup(
       function() {
         if (event.which == 13) {
@@ -20,9 +15,7 @@ $(document).ready(function() {
   );
   $(document).keyup(
       function() {
-        if (event.which == 13) {
-          searchMessage();
-        }
+          searchContact();
   });
 });
 
@@ -31,7 +24,15 @@ function sendMessage () {
   var testoDaInviare = $('.message').val();
   console.log(testoDaInviare);
   var nuovoMessaggio = $('.template .messager').clone();
-  nuovoMessaggio.children('p').text(testoDaInviare)
+
+  nuovoMessaggio.find('p').text(testoDaInviare)
+
+  var data = new Date();
+  var hours = addZero(data.getHours());
+  var minutes = addZero(data.getMinutes());
+  var time = hours +':'+ minutes;
+
+  nuovoMessaggio.find('small').text(time);
   console.log(nuovoMessaggio);
   $('.chat__main').append(nuovoMessaggio)
 
@@ -41,7 +42,13 @@ function receiveMessage () {
   var testoDaRicevere = 'ok';
   console.log(testoDaRicevere);
   var nuovoMessaggioRicevuto = $('.template .message_in').clone();
-  nuovoMessaggioRicevuto.children('p').text(testoDaRicevere)
+  nuovoMessaggioRicevuto.find('p').text(testoDaRicevere)
+  var data = new Date();
+  var hours = addZero(data.getHours());
+  var minutes = addZero(data.getMinutes());
+  var time = hours +':'+ minutes;
+
+  nuovoMessaggioRicevuto.find('small').text(time);
   $('.chat__main').append(nuovoMessaggioRicevuto)
 }
 function searchContact() {
@@ -50,7 +57,7 @@ function searchContact() {
 
   contact.each(
     function() {
-      var nomeContatto = $(this).find("h6").text().trim().toLowerCase();
+      var nomeContatto = $(this).find("h6").text().toLowerCase();
       if (!nomeContatto.includes(search)) {
         $(this).hide();
       } else {
@@ -58,4 +65,11 @@ function searchContact() {
       }
     }
   );
+}
+// FUNZIONE CHE AGGIUNGE LO ZERO ALL'ORARIO
+function addZero(number) {
+  if(number < 10) {
+    number = '0' + number;
+  }
+  return number;
 }
