@@ -76,3 +76,13 @@ function addZero(number) {
   }
   return number;
 }
+
+$('.chat_friend').click(
+  function () {
+      $('.chat_friend').removeClass('chat_active')
+      $(this).addClass('chat_active');
+      var chatSelect = $(this).attr('data-contact')
+      $('.chat__main').removeClass('active')
+      $('.chat__main[data-contact="'+chatSelect+'"]').addClass('active');
+    }
+)

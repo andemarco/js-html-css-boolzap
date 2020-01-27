@@ -321,3 +321,6 @@
 .active {
   display: block;
 }
+.chat_active {
+  background-color: lightgrey;
+}
