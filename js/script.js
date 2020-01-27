@@ -96,10 +96,8 @@ $('.chat_friend').click(
      );
 
 // CANCELLARE MESSAGGIO
-$('.chat_message .dropdown span').click(
+$(document).on('click', '.chat_message .dropdown span',
   function () {
-    var messaggio = $(this).parent('.dropdown').parent('.chat-message');
-    messaggio.remove();
-    console.log(messaggio);
+    var messaggio = $(this).parent('li').parent('.dropdown').parent().remove();
   }
 )
