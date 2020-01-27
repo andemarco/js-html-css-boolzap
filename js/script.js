@@ -17,6 +17,7 @@ $(document).ready(function() {
       function() {
           searchContact();
   });
+
 });
 
 // FUNZIONI
@@ -77,6 +78,7 @@ function addZero(number) {
   return number;
 }
 
+// SELEZIONARE LA CHAT
 $('.chat_friend').click(
   function () {
       $('.chat_friend').removeClass('chat_active')
@@ -85,4 +87,19 @@ $('.chat_friend').click(
       $('.chat__main').removeClass('active')
       $('.chat__main[data-contact="'+chatSelect+'"]').addClass('active');
     }
+)
+ // APRIRE menu a tendina messaggio
+ $(document).on('click', '.fa-chevron-down',
+       function () {
+         $(this).parent('.message--top').parent('.chat_message').find('.dropdown').toggle();
+       }
+     );
+
+// CANCELLARE MESSAGGIO
+$('.chat_message .dropdown span').click(
+  function () {
+    var messaggio = $(this).parent('.dropdown').parent('.chat-message');
+    messaggio.remove();
+    console.log(messaggio);
+  }
 )
