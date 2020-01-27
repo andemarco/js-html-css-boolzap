@@ -35,7 +35,7 @@ function sendMessage () {
 
   nuovoMessaggio.find('small').text(time);
   console.log(nuovoMessaggio);
-  $('.chat__main').append(nuovoMessaggio)
+  $('.active').append(nuovoMessaggio)
 
 }
 // FUNZIONE RICEVI MESSAGGIO
@@ -50,7 +50,7 @@ function receiveMessage () {
   var time = hours +':'+ minutes;
 
   nuovoMessaggioRicevuto.find('small').text(time);
-  $('.chat__main').append(nuovoMessaggioRicevuto)
+  $('.active').append(nuovoMessaggioRicevuto)
 }
 
 // FUNZIONE CERCA CONTATTI
