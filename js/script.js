@@ -20,6 +20,7 @@ $(document).ready(function() {
 });
 
 // FUNZIONI
+// FUNZIONE INVIA MESSAGGIO
 function sendMessage () {
   var testoDaInviare = $('.message').val();
   console.log(testoDaInviare);
@@ -37,7 +38,7 @@ function sendMessage () {
   $('.chat__main').append(nuovoMessaggio)
 
 }
-
+// FUNZIONE RICEVI MESSAGGIO
 function receiveMessage () {
   var testoDaRicevere = 'ok';
   console.log(testoDaRicevere);
@@ -51,6 +52,8 @@ function receiveMessage () {
   nuovoMessaggioRicevuto.find('small').text(time);
   $('.chat__main').append(nuovoMessaggioRicevuto)
 }
+
+// FUNZIONE CERCA CONTATTI
 function searchContact() {
   var search = $(".search_input").val().toLowerCase();
   var contact = $(".chat_friend");

@@ -211,12 +211,13 @@
   overflow-y: scroll;
   background-image: url(../avatars/wp_132.jpg);
   padding: 20px 60px 20px 60px;
+  display: none;
 }
 .chat__main__send {
   min-width: 20%;
   max-width: 80%;
   height: 40px;
-  padding: 0px 3px 0px 3px;
+  padding: 10px 3px 0px 3px;
   background-color: #DCF8C6;
   float: right;
   border-radius: 15px;
@@ -227,29 +228,43 @@
   min-width: 20%;
   max-width: 80%;
   height: 40px;
-  padding: 0px 3px 0px 3px;
+  padding: 10px 3px 0px 3px;
   background-color: white;
   float: left;
   border-radius: 15px;
   font-size: 0.75em;
   margin-bottom: 5px;
 }
-.chat__main__answer p,
-.chat__main__send p {
-  line-height: 30px;
-  text-align: left;
+
+/* .message--top {
+  position: absolute;
+} */
+.message--top p {
+  display: inline;
+}
+.chat__main__answer i,
+.chat__main__send i {
+  position: relative;
+  top: 0;
+  visibility: hidden;
 }
 .chat__main__answer small,
 .chat__main__send small {
   font-size: 0.3em;
-  line-height: 10px;
   text-align: right;
   display: block;
   vertical-align: top;
   padding-right: 5px;
   padding-bottom: 5px;
 }
-
+.chat__main__answer:hover i,
+.chat__main__send:hover i  {
+  visibility: visible;
+}
+.chat__main__answer i:hover,
+.chat__main__send i:hover {
+  cursor: pointer;
+}
 
 /* CHAT FOOTER  */
 .chat__footer {
@@ -283,4 +298,26 @@
 }
 .chat__footer__send:hover {
   cursor: pointer;
+}
+.dropdown {
+  top: -5px;
+  right: 25px;
+  position: relative;
+  background-color: white;
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  display: none;
+}
+.dropdown li {
+  text-decoration: none;
+  margin: 5px;
+  color: grey;
+}
+.dropdown li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.active {
+  display: block;
 }
