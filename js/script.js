@@ -17,7 +17,6 @@ $(document).ready(function() {
       function() {
           searchContact();
   });
-
 });
 
 // FUNZIONI
@@ -59,8 +58,7 @@ function searchContact() {
   var search = $(".search_input").val().toLowerCase();
   var contact = $(".chat_friend");
 
-  contact.each(
-    function() {
+  contact.each(function() {
       var nomeContatto = $(this).find("h6").text().toLowerCase();
       if (!nomeContatto.includes(search)) {
         $(this).hide();
@@ -84,8 +82,10 @@ $('.chat_friend').click(
       $('.chat_friend').removeClass('chat_active')
       $(this).addClass('chat_active');
       var chatSelect = $(this).attr('data-contact')
+      var chatSelectName = $(this).find('h6').text();
       $('.chat__main').removeClass('active')
       $('.chat__main[data-contact="'+chatSelect+'"]').addClass('active');
+      $('.chat__header__text').find('h6').text(chatSelectName);
     }
 )
  // APRIRE menu a tendina messaggio
@@ -99,5 +99,18 @@ $('.chat_friend').click(
 $(document).on('click', '.chat_message .dropdown span',
   function () {
     var messaggio = $(this).parent('li').parent('.dropdown').parent().remove();
+  }
+)
+
+// FOCUS BARRA
+$('.message').focus(
+  function() {
+    $('.send_button').removeClass('fa-microphone').addClass('fa-paper-plane')
+  }
+)
+//BLUR BARRA
+$('.message').blur(
+  function() {
+    $('.send_button').addClass('fa-microphone').removeClass('fa-paper-plane')
   }
 )

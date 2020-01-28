@@ -224,6 +224,9 @@
   font-size: 0.75em;
   margin-bottom: 5px;
 }
+.message--top {
+  display: flex;
+}
 .chat__main__answer {
   min-width: 20%;
   max-width: 80%;
@@ -235,16 +238,12 @@
   font-size: 0.75em;
   margin-bottom: 5px;
 }
-
-/* .message--top {
-  position: absolute;
-} */
 .message--top p {
   display: inline;
 }
 .chat__main__answer i,
 .chat__main__send i {
-  position: relative;
+  align-self: flex-end;
   top: 0;
   visibility: hidden;
 }
