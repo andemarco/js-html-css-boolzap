@@ -23,7 +23,6 @@ $(document).ready(function() {
 // FUNZIONE INVIA MESSAGGIO
 function sendMessage () {
   var testoDaInviare = $('.message').val();
-  console.log(testoDaInviare);
   var nuovoMessaggio = $('.template .messager').clone();
 
   nuovoMessaggio.find('p').text(testoDaInviare)
@@ -34,14 +33,12 @@ function sendMessage () {
   var time = hours +':'+ minutes;
 
   nuovoMessaggio.find('small').text(time);
-  console.log(nuovoMessaggio);
   $('.active').append(nuovoMessaggio)
-
+  var testoDaInviare = $('.message').val('');
 }
 // FUNZIONE RICEVI MESSAGGIO
 function receiveMessage () {
   var testoDaRicevere = 'ok';
-  console.log(testoDaRicevere);
   var nuovoMessaggioRicevuto = $('.template .message_in').clone();
   nuovoMessaggioRicevuto.find('p').text(testoDaRicevere)
   var data = new Date();
@@ -83,9 +80,13 @@ $('.chat_friend').click(
       $(this).addClass('chat_active');
       var chatSelect = $(this).attr('data-contact')
       var chatSelectName = $(this).find('h6').text();
+      var chatSelectTime = $(this).find('.time').text();
+      var chatSelectImage = $(this).find('img').attr('src');
       $('.chat__main').removeClass('active')
       $('.chat__main[data-contact="'+chatSelect+'"]').addClass('active');
       $('.chat__header__text').find('h6').text(chatSelectName);
+      $('.chat__header__text').find('p').text('Ultimo accesso alle ore ' + chatSelectTime);
+      $('.chat__header img').attr('src', chatSelectImage);
     }
 )
  // APRIRE menu a tendina messaggio
