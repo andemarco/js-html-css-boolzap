@@ -52,12 +52,12 @@ function receiveMessage () {
 
 // FUNZIONE CERCA CONTATTI
 function searchContact() {
-  var search = $(".search_input").val().toLowerCase();
-  var contact = $(".chat_friend");
+  var cerca = $(".search_input").val().toLowerCase();
+  var contatto = $(".chat_friend");
 
-  contact.each(function() {
+  contatto.each(function() {
       var nomeContatto = $(this).find("h6").text().toLowerCase();
-      if (!nomeContatto.includes(search)) {
+      if (!nomeContatto.includes(cerca)) {
         $(this).hide();
       } else {
         $(this).show();
